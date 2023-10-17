@@ -1,6 +1,6 @@
 #include "MorseBuzzer.h"
 
-MorseBuzzer::MorseBuzzer(int p_duree, int p_BuzzerPin) : Morse(p_duree)
+MorseBuzzer::MorseBuzzer(int p_duree, byte p_BuzzerPin) : Morse(p_duree)
 {
     m_BuzzerPin = p_BuzzerPin;
     pinMode(p_BuzzerPin, OUTPUT);

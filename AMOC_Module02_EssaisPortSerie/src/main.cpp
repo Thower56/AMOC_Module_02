@@ -59,7 +59,7 @@ void setup()
   // passageDeParametresReference(flasher);
 
   //morse = new MorseSerie(1000);
-  //morse = new MorseDEL(200, 10);
+  //morse = new MorseDEL(200, 8);
   morse = new MorseBuzzer(200, 8);
 }
 
@@ -74,7 +74,7 @@ void loop()
   // delTest.eteindre();
   // delay(200);
   //morse->afficherSOS();
-  morse->texteAEmettre("...---...");
+  morse->texteAEmettre("... --- ...");
   Serial.println("ping");
   Serial.println("");
   delay(2000);

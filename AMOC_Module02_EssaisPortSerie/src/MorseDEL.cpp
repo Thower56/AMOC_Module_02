@@ -1,6 +1,6 @@
 #include "MorseDEL.h"
 
-MorseDEL::MorseDEL(int p_duree, int p_DELPin) : Morse(p_duree)
+MorseDEL::MorseDEL(int p_duree, byte p_DELPin) : Morse(p_duree)
 {
     m_DELPin = p_DELPin;
     pinMode(p_DELPin, OUTPUT);
@@ -36,9 +36,10 @@ void MorseDEL::texteAEmettre(String p_texte) const
         {
             afficherTrait();
         }
-        else
+        else if (text == ' ')
         {
-            ;
+            digitalWrite(m_DELPin, LOW);
+            delay(getDureePoint());
         }
     }
 }
